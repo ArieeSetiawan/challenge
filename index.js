@@ -1,5 +1,5 @@
+require('dotenv').config();
 const express = require ("express");
-const res = require("express/lib/response");
 const app = express();
 const PORT = 3000;
 const itemRoutes= require ('./routes/items-routes');
@@ -20,3 +20,9 @@ app.get("/",(req,res)=>{
 app.listen(PORT, ()=>{
     console.log("Server is running on port", PORT);
 })
+
+//npm i pg
+//npm i dotenv
+//npm i --save sequelize && --save pg pg-hstore
+//npm i sequelize-cli --save-dev (npx sequlize-cli init
+//npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
